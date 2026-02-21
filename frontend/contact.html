@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - UrbanCraft</title>
+    <meta name="description" content="Get in touch with UrbanCraft for your design and build needs">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Contact page specific styles */
+        .contact-hero {
+            background: linear-gradient(rgba(42,92,125,0.9), rgba(42,92,125,0.9)), url('assets/images/contact-header.jpg') center/cover;
+            color: white;
+            padding: 6rem 0;
+            text-align: center;
+        }
+        
+        .contact-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: -4rem auto 3rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .contact-info-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .contact-info-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-info-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-info-card h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+        }
+        
+        .contact-info-card p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        .contact-info-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .contact-info-card a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-main {
+            padding: 4rem 0;
+            background: var(--light);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .contact-image {
+            background: linear-gradient(rgba(42,92,125,0.8), rgba(42,92,125,0.8)), url('assets/images/contact-office.jpg') center/cover;
+            color: white;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        
+        .contact-image h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-image p {
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+        
+        .contact-form-container {
+            padding: 3rem;
+        }
+        
+        .form-message {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1.5rem;
+            display: none;
+        }
+        
+        .form-message.show {
+            display: block;
+        }
+        
+        .form-message.success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-message.error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .map-section {
+            padding: 0 0 4rem;
+        }
+        
+        .map-container {
+            height: 400px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .business-hours {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .hours-item .day {
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .hours-item .time {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 992px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-image {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-info-grid {
+                margin-top: -2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    Urban<span>Craft</span>
+                </a>
+                
+                <button class="hamburger" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p style="font-size: 1.2rem; max-width: 600px; margin: 1rem auto;">Have a question or ready to start your project? We'd love to hear from you.</p>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <div class="container">
+        <div class="contact-info-grid">
+            <div class="contact-info-card">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Visit Us</h3>
+                <p>123 Design Avenue<br>Creative District<br>New York, NY 10001</p>
+                <a href="#map">Get Directions →</a>
+            </div>
+            
+            <div class="contact-info-card">
+                <i class="fas fa-phone-alt"></i>
+                <h3>Call Us</h3>
+                <p>Main: (212) 555-0123<br>Support: (212) 555-0456<br>Emergency: (212) 555-0789</p>
+                <a href="tel:+12125550123">Call Now →</a>
+            </div>
+            
+            <div class="contact-info-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email Us</h3>
+                <p>General: info@urbancraft.com<br>Projects: projects@urbancraft.com<br>Careers: careers@urbancraft.com</p>
+                <a href="mailto:info@urbancraft.com">Send Email →</a>
+            </div>
+            
+            <div class="contact-info-card">
+                <i class="fas fa-clock"></i>
+                <h3>Business Hours</h3>
+                <div class="business-hours">
+                    <div class="hours-item">
+                        <span class="day">Mon-Fri</span>
+                        <span class="time">9am-6pm</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Saturday</span>
+                        <span class="time">10am-4pm</span>
+                    </div>
+                    <div class="hours-item">
+                        <span class="day">Sunday</span>
+                        <span class="time">Closed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-image">
+                    <h2>Let's Create Something Amazing</h2>
+                    <p>Whether you're planning a renovation, new construction, or just have questions about our services, our team is ready to help. Fill out the form and we'll get back to you within 24 hours.</p>
+                    <p style="margin-top: 2rem;">
+                        <i class="fas fa-check-circle"></i> Free initial consultation<br>
+                        <i class="fas fa-check-circle"></i> Detailed project estimates<br>
+                        <i class="fas fa-check-circle"></i> Expert advice and guidance
+                    </p>
+                </div>
+                
+                <div class="contact-form-container">
+                    <div id="formMessage" class="form-message"></div>
+                    
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="service">Service Interested In *</label>
+                                <select class="form-control" id="service" name="service" required>
+                                    <option value="">Select a service</option>
+                                    <option value="residential">Residential Design</option>
+                                    <option value="commercial">Commercial Design</option>
+                                    <option value="renovation">Renovation</option>
+                                    <option value="consultation">Consultation</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </div>
+                        
+                        <p style="font-size: 0.9rem; color: var(--gray);">
+                            <i class="fas fa-lock"></i> Your information is secure and will not be shared.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="map" class="map-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Find Us</h2>
+                <p>Visit our design studio in the heart of the Creative District</p>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368400567!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a3166a7c5bf%3A0xbcdb7cf8f1d9f9f9!2sCreative%20District%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        Urban<span>Craft</span>
+                    </a>
+                    <p>Creating beautiful, functional spaces that inspire.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Residential</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#">Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 UrbanCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

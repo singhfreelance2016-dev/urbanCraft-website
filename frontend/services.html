@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - UrbanCraft</title>
+    <meta name="description" content="Explore our comprehensive design and build services">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    Urban<span>Craft</span>
+                </a>
+                
+                <button class="hamburger" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/images/services-header.jpg') center/cover; padding: 8rem 0 4rem; text-align: center; color: white;">
+        <div class="container">
+            <h1>Our Services</h1>
+            <p>Comprehensive solutions for every space</p>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p>From concept to completion, we've got you covered</p>
+            </div>
+            
+            <div class="services-grid" style="margin-top: 3rem;">
+                <!-- Services loaded dynamically from API -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process" style="background: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Process</h2>
+                <p>How we bring your vision to life</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                <div class="process-step" style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: var(--shadow); position: relative;">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
+                    <h3>Consultation</h3>
+                    <p>We meet to discuss your vision, requirements, and budget</p>
+                </div>
+                
+                <div class="process-step" style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: var(--shadow);">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
+                    <h3>Design</h3>
+                    <p>Our team creates detailed plans and 3D visualizations</p>
+                </div>
+                
+                <div class="process-step" style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: var(--shadow);">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
+                    <h3>Planning</h3>
+                    <p>We handle permits, materials, and project scheduling</p>
+                </div>
+                
+                <div class="process-step" style="text-align: center; padding: 2rem; background: white; border-radius: 10px; box-shadow: var(--shadow);">
+                    <div style="width: 60px; height: 60px; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
+                    <h3>Construction</h3>
+                    <p>Our skilled team brings the design to life</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--light-gray); border-radius: 5px;">
+                    <button class="faq-question" style="width: 100%; text-align: left; padding: 1rem; background: none; border: none; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>How long does a typical project take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1rem 1rem; display: none;">
+                        <p>Project timelines vary based on scope and complexity. A typical renovation takes 4-8 weeks, while new construction can take 3-6 months. We'll provide a detailed timeline during consultation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--light-gray); border-radius: 5px;">
+                    <button class="faq-question" style="width: 100%; text-align: left; padding: 1rem; background: none; border: none; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>Do you provide free consultations?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1rem 1rem; display: none;">
+                        <p>Yes! We offer complimentary initial consultations to discuss your project, answer questions, and provide preliminary estimates.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item" style="margin-bottom: 1rem; border: 1px solid var(--light-gray); border-radius: 5px;">
+                    <button class="faq-question" style="width: 100%; text-align: left; padding: 1rem; background: none; border: none; font-size: 1.1rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                        <span>Are you licensed and insured?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer" style="padding: 0 1rem 1rem; display: none;">
+                        <p>Absolutely. We are fully licensed, bonded, and insured for your peace of mind. We'd be happy to provide documentation upon request.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" style="background: linear-gradient(rgba(42,92,125,0.9), rgba(42,92,125,0.9)), url('assets/images/cta-bg.jpg') center/cover; color: white; text-align: center;">
+        <div class="container">
+            <h2>Ready to Get Started?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.2rem;">Let's discuss your project</p>
+            <a href="contact.html" class="btn btn-secondary">Request a Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        Urban<span>Craft</span>
+                    </a>
+                    <p>Creating beautiful, functional spaces that inspire.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Residential</a></li>
+                        <li><a href="#">Commercial</a></li>
+                        <li><a href="#">Renovation</a></li>
+                        <li><a href="#">Design</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 UrbanCraft. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                if (answer.style.display === 'none' || !answer.style.display) {
+                    answer.style.display = 'block';
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                } else {
+                    answer.style.display = 'none';
+                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                }
+            });
+        });
+    </script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
