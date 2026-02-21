@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - UrbanCraft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin-style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <div class="logo">
+                    Urban<span>Craft</span>
+                </div>
+                <h2>Admin Dashboard</h2>
+                <p>Enter your credentials to access the dashboard</p>
+            </div>
+            
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="username">
+                        <i class="fas fa-user"></i>
+                        Username
+                    </label>
+                    <input type="text" 
+                           id="username" 
+                           name="username" 
+                           class="form-control" 
+                           placeholder="Enter your username"
+                           required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">
+                        <i class="fas fa-lock"></i>
+                        Password
+                    </label>
+                    <input type="password" 
+                           id="password" 
+                           name="password" 
+                           class="form-control" 
+                           placeholder="Enter your password"
+                           required>
+                </div>
+                
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login to Dashboard
+                    </button>
+                </div>
+                
+                <div id="loginMessage" class="login-message"></div>
+            </form>
+            
+            <div class="login-footer">
+                <p>Default credentials: admin / Admin@123</p>
+                <p class="text-muted">Change password after first login</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="../js/api.js"></script>
+    <script src="js/admin-auth.js"></script>
+</body>
+</html>
